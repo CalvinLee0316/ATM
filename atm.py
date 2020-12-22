@@ -95,7 +95,8 @@ while(True):
                 break
         except ValueError:
             print('##### Please enter a number ####')
-            print('#### %d tries left ####' % (2-i))
+            if(i!=2):
+                print('#### %d tries left ####' % (2-i))
             pinTrue = False
 
     #if pin was not matched go back to beginning screen
