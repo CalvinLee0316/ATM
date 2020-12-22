@@ -82,13 +82,14 @@ while(True):
     pinTrue = False
 
     #check if pin is correct, give 3 tries
+    print('#### Please enter your pin ####')
     for i in range(3):
-        print('#### Welcome, account number %s, please enter your pin ####' % account_input)
         #check to see if the pin is valid
         try:
             pin_input = int(input())
             if (currAccount.correctPin(pin_input)) != True :
-                print('#### Pin is incorrect, %d tries left ####' % (2-i))
+                if(i!=2):
+                    print('#### Pin is incorrect, %d tries left ####' % (2-i))
             else:
                 pinTrue = True
                 break
@@ -99,6 +100,7 @@ while(True):
 
     #if pin was not matched go back to beginning screen
     if pinTrue == False:
+        print('Incorrect too many times, reverting to starting screen')
         continue
     
     print('#### Which balance would you like access? ####')
