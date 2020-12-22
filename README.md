@@ -30,5 +30,7 @@ How to use:
 3.Run the file atm.py (ex. python3 atm.py on mac)
 4.Follow directions on screen
 
+A simple console "UI" is implemented, these print statements may be replaced with a better user interface by another engineer, as instructions have stated.
+
 Basic Database of accounts contains account number 0-19, each with 3 different balances
 To test and use existing accounts, populate the dictionary and list 'accounts' and 'accountNums' with actual accounts
